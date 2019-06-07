@@ -9,5 +9,15 @@
   ],
   "author": "serverless.com",
   "repository": "serverless/eslint-config",
+  "eslintConfig": {
+    "extends": "./node.js",
+    "root": true
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=5"
+  },
   "license": "ISC"
 }
