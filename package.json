@@ -1,0 +1,13 @@
+{
+  "name": "@serverless/eslint-config",
+  "version": "1.0.0",
+  "description": "ESLint & Prettier config for Serveless projects",
+  "keywords": [
+    "lint",
+    "eslint",
+    "prettier"
+  ],
+  "author": "serverless.com",
+  "repository": "serverless/eslint-config",
+  "license": "ISC"
+}
