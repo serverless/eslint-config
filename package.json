@@ -14,13 +14,15 @@
     "root": true
   },
   "devDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^5.16.0",
+    "prettier": "^1.18.0"
   },
   "peerDependencies": {
     "eslint": ">=5"
   },
   "scripts": {
-    "lint": "eslint . --cache"
+    "lint": "eslint . --cache",
+    "prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
   },
   "license": "ISC"
 }
