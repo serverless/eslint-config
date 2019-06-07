@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
+    "git-list-updated": "^1.1.2",
     "prettier": "^1.18.0"
   },
   "peerDependencies": {
@@ -22,6 +23,8 @@
   },
   "scripts": {
     "lint": "eslint . --cache",
+    "lint-updated": "pipe-git-updated --ext=js -- eslint --cache",
+    "prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
     "prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
   },
   "license": "ISC"
