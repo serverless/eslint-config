@@ -14,4 +14,4 @@ jobs:
     # To speed up Travis build, use one job per Platform + Node.js version combination
     - name: "Lint, Commitlint - Node.js v12"
       node_js: 12
-      script: npm run lint-updated && npm run commitlint-ci-pull-request
+      script: npm run prettier-check-updated && npm run lint-updated && npm run commitlint-ci-pull-request
