@@ -10,7 +10,7 @@
 npm i --save-dev eslint eslint-plugin-import prettier git-list-updated
 ```
 
-2. Configure ESLint
+1. Configure ESLint
 
 Add `eslintConfig` to package.json:
 
@@ -36,7 +36,17 @@ _For Browser projects:_
 }
 ```
 
-3. Configure npm scripts
+1. Configure Prettier
+
+Add `.prettier.config.js` file with following content:
+
+```javascript
+'use strict';
+
+module.exports = require('@serverless/eslint-config/prettier.config');
+```
+
+1. Configure npm scripts
 
 Configure following scripts in package.json:
 
@@ -52,7 +62,7 @@ Configure following scripts in package.json:
 }
 ```
 
-4. Ensure to validate changes in CI
+1. Ensure to validate changes in CI
 
 Run following validation in CI setup:
 
