@@ -10,30 +10,29 @@
 npm i --save-dev eslint eslint-plugin-import prettier git-list-updated
 ```
 
-
 2. Configure ESLint
-
 
 Add `eslintConfig` to package.json:
 
-
 _For Node.js projects:_
+
 ```json
 {
-   "eslintConfig": {
+  "eslintConfig": {
     "extends": "@serverless/eslint-config/node",
     "root": true
-  },
+  }
 }
 ```
 
 _For Browser projects:_
+
 ```json
 {
-   "eslintConfig": {
-      "extends": "@serverless/eslint-config/browser",
-      "root": true
-  },
+  "eslintConfig": {
+    "extends": "@serverless/eslint-config/browser",
+    "root": true
+  }
 }
 ```
 
