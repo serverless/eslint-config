@@ -62,7 +62,6 @@ module.exports = {
     'no-new-require': 'error',
     'no-new-wrappers': 'error',
     'no-octal-escape': 'error',
-    'no-param-reassign': ['error', { props: true }],
     'no-proto': 'error',
     'no-restricted-syntax': [
       'error',
