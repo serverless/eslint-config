@@ -12,10 +12,23 @@ stages:
 jobs:
   include:
     # To speed up Travis build, use one job per Platform + Node.js version combination
+
+    # PR's from branches
+    # Ensure commit messages follow CC
     - name: 'Prettier check updated, Lint updated, Commitlint - Node.js v12'
-      if: type = pull_request
+      if: type = pull_request AND fork = false
       node_js: 12
       script: npm run prettier-check-updated && npm run lint-updated && npm run commitlint-ci-pull-request
+
+    # PR's from forks
+    # Do not validate commit messages,
+    # (if user didn't ensure CC, PR should be squash merged with valid CC commit message)
+    - name: 'Prettier check updated, Lint updated - Node.js v12'
+      if: type = pull_request AND fork = true
+      node_js: 12
+      script: npm run prettier-check-updated && npm run lint-updated
+
+    # master branch and version tags
     - name: 'Lint - Node.js v12'
       if: type = push
       node_js: 12
