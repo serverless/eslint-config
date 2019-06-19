@@ -13,12 +13,19 @@
     "extends": "./node.js",
     "root": true
   },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-import": "^2.17.3",
     "git-list-updated": "^1.1.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "standard-version": "^6.0.1"
   },
   "peerDependencies": {
     "eslint": ">=5"
@@ -28,6 +35,7 @@
     "commitlint": "commitlint -f HEAD@{15}",
     "commitlint-ci-pull-request": "commitlint -f HEAD~1",
     "lint-updated": "pipe-git-updated --ext=js -- eslint --cache",
+    "prepare-release": "standard-version",
     "prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
     "prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
     "prettify": "prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\""
