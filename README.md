@@ -55,6 +55,7 @@ Configure following scripts in package.json:
   "scripts": {
     "lint": "eslint . --cache",
     "lint-updated": "pipe-git-updated --ext=js -- eslint --cache",
+    "prettier-check": "prettier -c --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
     "prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
     "prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
   }
