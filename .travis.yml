@@ -13,7 +13,8 @@ stages:
 
 jobs:
   include:
-    # To speed up Travis build, use one job per Platform + Node.js version combination
+    # In most cases it's best to configure one job per Platform & Node.js version combination
+    # (job setup takes ca 1 minute, one task ca few seconds)
 
     # PR's from branches
     # Ensure commit messages follow CC
