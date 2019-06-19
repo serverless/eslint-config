@@ -54,7 +54,6 @@ Configure following scripts in package.json:
 {
   "scripts": {
     "lint": "eslint . --cache",
-    "commitlint": "commitlint -f HEAD@{15}",
     "lint-updated": "pipe-git-updated --ext=js -- eslint --cache",
     "prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
     "prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'"
@@ -64,7 +63,9 @@ Configure following scripts in package.json:
 
 1. Ensure to validate changes in CI
 
-Run following validation in CI setup:
+Run following validation of PR's in CI build.
+
+Note: following should be run only for PR's (as `*-updated`) scripts may fail on _branch_ or _tag_ builds due to lack of existing reference to `master`)
 
 ```bash
 npm run lint-updated && npm run prettier-check-updated
