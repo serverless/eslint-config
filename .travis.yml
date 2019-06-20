@@ -19,7 +19,7 @@ stages:
 
 jobs:
   include:
-    # In most cases it's best to configure one job per Platform & Node.js version combination
+    # In most cases it's best to configure one job per platform & Node.js version combination
     # (job boot & setup takes ca 1 minute, one task run lasts ca few seconds)
 
     # PR's from branches
