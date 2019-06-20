@@ -38,7 +38,7 @@ jobs:
 
     # PR's from forks
     # Do not validate commit messages,
-    # (if user didn't ensure CC, PR should be squash merged with valid CC commit message)
+    # (if user didn't ensure CC, PR should be squash merged with a valid CC commit message)
     - name: 'Prettier check updated, Lint updated - Node.js v12'
       if: type = pull_request AND fork = true
       node_js: 12
