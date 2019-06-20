@@ -4,7 +4,7 @@
 
 ### Configuration in a project
 
-#### 1. Install needed dependencies:
+#### 1. Install needed dependencies
 
 ```bash
 npm i --save-dev eslint eslint-plugin-import prettier git-list-updated
