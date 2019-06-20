@@ -1,8 +1,8 @@
 # @serverless/eslint-config
 
-## Common ESLint, Prettier and Commitlint (experimental) configuration, for Serverless projects
+## Common ESLint, Prettier configuration for Serverless projects
 
-### How to setup linters in a project
+### Configuration in a project
 
 1. Install needed dependencies:
 
@@ -48,8 +48,6 @@ module.exports = require('@serverless/eslint-config/prettier.config');
 
 1. Configure npm scripts
 
-Configure following scripts in package.json:
-
 ```json
 {
   "scripts": {
@@ -71,6 +69,8 @@ Note: following should be run only for PR's (as `*-updated`) scripts may fail on
 ```bash
 npm run lint-updated && npm run prettier-check-updated
 ```
+
+---
 
 ### Commitlint and automation of release process (experimental)
 
