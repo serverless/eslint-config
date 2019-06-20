@@ -1,7 +1,11 @@
 language: node_js
 
 git:
-  depth: 1 # No need for commits history
+  # Do not take whole history, but ensure to not break things:
+  # - Merging multiple PR's around same time may introduce scenario that it's not last merge commit
+  #   that is to be tested, and we need to have access to it
+  # - At least 2 last commits need to be provided to properly detect a version switch
+  depth: 10
 
 branches:
   only:
