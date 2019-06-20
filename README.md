@@ -72,8 +72,20 @@ Note: following should be run only for PR's (as `*-updated`) scripts may fail on
 npm run lint-updated && npm run prettier-check-updated
 ```
 
-#### Commitlint (experimental)
+### Commitlint and automation of release process (experimental)
 
-This project is also covered by [commitlint](https://commitlint.js.org/) which ensure readable and programmaticaly consumable git commit messages.
+Commit messages in context of this project should follow [Convention Commits Convention](https://www.conventionalcommits.org/en/v1.0.0-beta.4/#summary)
 
-See proposed [Commit Message Guide](https://docs.google.com/document/d/1hKUs3qt_aVp_PBI1UqvfaIqKma3jAJimEoGCRGGbOqs/edit#)
+See proposed [Commit Message Guidelines](https://docs.google.com/document/d/1hKUs3qt_aVp_PBI1UqvfaIqKma3jAJimEoGCRGGbOqs/edit#)
+
+#### Release process automation with help of Travis CI
+
+1. Commit messages are validated (with [commitlint](https://commitlint.js.org/)) in context of PR's that are coming from local branches.
+   To not increase difficulty of contribution, we do not enforce that on external contributors. Still in turn PR's coming from forks (if commit messages do not follow CC), are expected to be squash merged with a valid CC commit message.
+1. In Release PR by running `npm run prepare-release` command developer bumps version in `package.json` and generates the changelog entry (which can be altered if needed).
+1. Release PR's are automatically detected in CI by fact of `version` in `package.json` file being changed.
+   In context of that build, existence of new version changelog entry (in `CHANGELOG.md`) is validated.
+1. Once release PR is merged, `master` build detects that release PR was merged by fact that it covers change of `version` field in `package.json` file. In such case (after tests pass) version tag is created and pushed to the repository
+1. In context fo version tag build, new version is published to npm, and release notes are retrieved from CHANGELOG.md and pushed to GitHub.
+1. If needed release notes can be updated at any time afterwards. They should be updated in `CHANGELOG.md` and change can be pushed to GitHub release notes by running:
+   `npx github-release-from-cc-changelog <version>`
