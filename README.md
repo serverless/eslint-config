@@ -4,13 +4,13 @@
 
 ### Configuration in a project
 
-1. Install needed dependencies:
+#### 1. Install needed dependencies:
 
 ```bash
 npm i --save-dev eslint eslint-plugin-import prettier git-list-updated
 ```
 
-1. Configure ESLint
+#### 2. Configure ESLint
 
 Add `eslintConfig` to package.json:
 
@@ -36,7 +36,7 @@ _For Browser projects:_
 }
 ```
 
-1. Configure Prettier
+#### 3. Configure Prettier
 
 Add `.prettier.config.js` file with following content:
 
@@ -46,7 +46,7 @@ Add `.prettier.config.js` file with following content:
 module.exports = require('@serverless/eslint-config/prettier.config');
 ```
 
-1. Configure npm scripts
+#### 4. Configure npm scripts
 
 ```json
 {
@@ -60,7 +60,7 @@ module.exports = require('@serverless/eslint-config/prettier.config');
 }
 ```
 
-1. Ensure to validate changes in CI
+#### 5. Ensure to validate changes in CI
 
 Run following validation of PR's in CI build.
 
