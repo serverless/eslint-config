@@ -20,10 +20,10 @@ stages:
 jobs:
   include:
     # In most cases it's best to configure one job per Platform & Node.js version combination
-    # (job setup takes ca 1 minute, one task ca few seconds)
+    # (job boot & setup takes ca 1 minute, one task run lasts ca few seconds)
 
     # PR's from branches
-    # Ensure commit messages follow CC
+    # Ensure commit messages follow CC, and confirm on changelog in case of release PR's
     - name: 'Prettier check updated, Lint updated, Commitlint, Changelog confirm (on release) - Node.js v12'
       if: type = pull_request AND fork = false
       node_js: 12
