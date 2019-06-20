@@ -11,7 +11,6 @@ module.exports = {
     'camelcase': ['error', { properties: 'never' }],
     'comma-dangle': ['error', 'always-multiline'],
     'consistent-return': 'error',
-
     'curly': ['error', 'multi-line'],
     'default-case': ['error', { commentPattern: '^no default$' }],
     'dot-notation': ['error', { allowKeywords: true }],
