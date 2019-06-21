@@ -49,6 +49,7 @@ jobs:
     # master branch
     - name: 'Lint, Tag on version bump - Node.js v12'
       env:
+        # GITHUB_TOKEN
         - secure: D1+mm66C9ik6AGzkVO8KkRF3Z8DwquK2clfVhNqL0ZErT2FRxWtv+21bDDfymd2ZOOm3hv9wLQw4O+nreKGWhzNDAZYwx46ngPl6bl+GA+ZeIWXyHbli02dcIevEJU2US1MA1f0kefhDvr6vNTMdOXOk7CmSMYazJa3kcEoCotdc6Fb6et20bXHXh6mE0LDzSTsVXuM9s3JIESYyU40qK9fFPcKDpOgxqbZ8K57b7ufOeL9caZ2VN0ixq2G/AoEvZPCijFAVAltcc0W11t6Kri1Cs4cv+ox64dBAwhk9w4fD6F75vgRxC/5aHitafTtRTbZPLSOCJpfeP7hmiBAK/7qMLCo0k1XML9S42fj1yhk87Dfa2FJ1Q69bLFSZbxiM1Z8esenIDk34rZpIszkEwrBDuTVJRC00M7jfWnw4sSDs4ka/hkU/968Fe3ppYWITfdBZccTGSTZK6/Zkn/fKqLIonapqh43O18hujhdcjQFNtnXUDOcnJ5leK9LRziquGi2kO/1Uhc3oR7nnRF5VR/qwXfYabdpDul5Kdp8lo7cp2bozsP5oFiDDO+t/JGLf4ryHtBfKh2HvZbMgcGDfEuRHxfQWDhtHf2xh/hHkYy1L0/W8mGSjopfF0jSHiqYcje05LmNchsSrY1nIA0lTPjnfZimNbKMhEQ0FspBBzpU=
       if: branch = master AND type = push
       node_js: 12
@@ -66,6 +67,7 @@ jobs:
     # version tag
     - stage: Deploy
       env:
+        # GITHUB_TOKEN
         - secure: D1+mm66C9ik6AGzkVO8KkRF3Z8DwquK2clfVhNqL0ZErT2FRxWtv+21bDDfymd2ZOOm3hv9wLQw4O+nreKGWhzNDAZYwx46ngPl6bl+GA+ZeIWXyHbli02dcIevEJU2US1MA1f0kefhDvr6vNTMdOXOk7CmSMYazJa3kcEoCotdc6Fb6et20bXHXh6mE0LDzSTsVXuM9s3JIESYyU40qK9fFPcKDpOgxqbZ8K57b7ufOeL9caZ2VN0ixq2G/AoEvZPCijFAVAltcc0W11t6Kri1Cs4cv+ox64dBAwhk9w4fD6F75vgRxC/5aHitafTtRTbZPLSOCJpfeP7hmiBAK/7qMLCo0k1XML9S42fj1yhk87Dfa2FJ1Q69bLFSZbxiM1Z8esenIDk34rZpIszkEwrBDuTVJRC00M7jfWnw4sSDs4ka/hkU/968Fe3ppYWITfdBZccTGSTZK6/Zkn/fKqLIonapqh43O18hujhdcjQFNtnXUDOcnJ5leK9LRziquGi2kO/1Uhc3oR7nnRF5VR/qwXfYabdpDul5Kdp8lo7cp2bozsP5oFiDDO+t/JGLf4ryHtBfKh2HvZbMgcGDfEuRHxfQWDhtHf2xh/hHkYy1L0/W8mGSjopfF0jSHiqYcje05LmNchsSrY1nIA0lTPjnfZimNbKMhEQ0FspBBzpU=
       node_js: 12
       script: skip
