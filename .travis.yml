@@ -72,5 +72,6 @@ jobs:
       deploy:
         provider: npm
         email: services@serverless.com
-        api_key: # TODO, register an NPM_TOKEN for deploys
+        api_key:
+          secure: TR0iwraM6LkJFqKIjPbHP04yE4HYD0bY4jTGrf8TQTgeOUw3jF/5vLXU5XORYypWSgxmehKUaeeo8YC0QuC72NF37DkvzmwS7ENoIwcOxEtrIYjWhWVWBsPN8qfM5gFj0k4KY1clvamdTOTQ+yg5od7iYIDhg3L2CM3yMAsx/MifMYZbYvXIUGeXuoohd2XTwh89kSMMoae/E+zSvvZANxByDOAliSM10O6kAn9UclrE8lILskmchuNurzqMpUkIJQuAYXUojYMnou5uZhRPWrtbyrcrv+QFb7LQmqHD3gSJemLrgjKM0/7IkPSirRcca6bixxrJYwCDvr35KkWHUibEbmgBJL1pyAmftBG5cL6qMQzBihLCQDy/dI+leR48uTWDlWA+eSy05vkmYEm5JoxY49R7wbMG/aZb1lZlz+M9+HgUuJO9spK1wIiQrqOV8oLizjMAUFy94xp7/kXImj0KVR6yk2cxBBqDyVAbINitF+h98hl7BPQepoCcj4Y5Mz8y20RPZsk0+Y1z5sfaXhCCeNcPgLqv8uKyDwcXfM1TgoFk9L52m5DfHpBKfm5THWqbY4THB1dpQfPkjZEREwDoFo+fAWefHcB+erJ+kbGl2kxZw/7T/TRZmM34ExFLbUkl4kF/Xc4s3b4QdFkbNfbHljn/2rhg+sFHR3j83FY=
       after_deploy: npx github-release-from-cc-changelog $TRAVIS_TAG
