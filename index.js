@@ -32,7 +32,6 @@ module.exports = {
     'import/no-unresolved': ['error', { commonjs: true }],
     'import/prefer-default-export': 'error',
 
-    'max-len': ['error', 100, 2, { ignoreUrls: true }],
     'new-cap': ['error', { newIsCap: true }],
     'no-array-constructor': 'error',
     'no-caller': 'error',
