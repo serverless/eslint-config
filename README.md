@@ -38,7 +38,7 @@ _For Browser projects:_
 
 #### 3. Configure Prettier
 
-Add `.prettier.config.js` file with following content:
+Add `prettier.config.js` file with following content:
 
 ```javascript
 'use strict';
