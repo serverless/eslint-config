@@ -39,6 +39,18 @@ before_script:
   # More info on below line: https://www.davidpashley.com/articles/writing-robust-shell-scripts/#idm5413512
   - set -e
 
+# Ensure to fail build if deploy fails, Travis doesn't ensure that: https://github.com/travis-ci/travis-ci/issues/921
+before_deploy:
+  # Remove eventual old npm logs
+  - rm -rf ~/.npm/_logs
+after_deploy:
+  - |
+    # npm creates log only on failure
+    if [ -d ~/.npm/_logs ]; then
+      # Undocumented way to force Travis build to fail
+      travis_terminate 1
+    fi
+
 jobs:
   include:
     # In most cases it's best to configure one job per platform & Node.js version combination
