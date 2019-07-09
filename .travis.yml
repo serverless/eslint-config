@@ -67,7 +67,7 @@ jobs:
         - npm run commitlint-ci-pull-request
         # If release PR, confirm we have a changelog
         - |
-          tagName=`git diff master package.json | grep '"version": "' | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
+          tagName=`git diff master package.json | grep '"version": "' | tail -n 1 | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
           if [ -n "$tagName" ];
           then
             npx dump-release-notes-from-cc-changelog $tagName
@@ -94,7 +94,7 @@ jobs:
         - npm run lint
         # If package version was changed with last merged PR, push tag
         - |
-          tagName=`git diff HEAD^ package.json | grep '"version": "' | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
+          tagName=`git diff HEAD^ package.json | grep '"version": "' | tail -n 1 | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
           if [  -n "$tagName" ];
           then
             git tag v$tagName && git push -q https://$GITHUB_TOKEN@github.com/serverless/eslint-config --tags
