@@ -34,6 +34,11 @@ install:
   # Note: npm documents --dev option for dev dependencies update, but it's only --save-dev that works
   - npm update --save-dev --no-save # Updates just devDependencies
 
+before_script:
+  # Fail build right after first script fails. Travis doesn't ensure that: https://github.com/travis-ci/travis-ci/issues/1066
+  # More info on below line: https://www.davidpashley.com/articles/writing-robust-shell-scripts/#idm5413512
+  - set -e
+
 jobs:
   include:
     # In most cases it's best to configure one job per platform & Node.js version combination
@@ -45,15 +50,16 @@ jobs:
       if: type = pull_request AND fork = false
       node_js: 12
       script:
+        - npm run prettier-check-updated
+        - npm run lint-updated
+        - npm run commitlint-ci-pull-request
+        # If release PR, confirm we have a changelog
         - |
-          npm run prettier-check-updated && npm run lint-updated && npm run commitlint-ci-pull-request &&
-          {
-            # If release PR, confirm we have a changelog
-            tagName=`git diff master package.json | grep '"version": "' | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"`
-            if [ $? -eq 0 ]; then
-              npx dump-release-notes-from-cc-changelog $tagName
-            fi
-          }
+          tagName=`git diff master package.json | grep '"version": "' | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
+          if [ -n "$tagName" ];
+          then
+            npx dump-release-notes-from-cc-changelog $tagName
+          fi
 
     # PR's from forks
     # Do not validate commit messages,
@@ -61,7 +67,9 @@ jobs:
     - name: 'Prettier check updated, Lint updated - Node.js v12'
       if: type = pull_request AND fork = true
       node_js: 12
-      script: npm run prettier-check-updated && npm run lint-updated
+      script:
+        - npm run prettier-check-updated
+        - npm run lint-updated
 
     # master branch
     - name: 'Lint, Tag on version bump - Node.js v12'
@@ -71,15 +79,14 @@ jobs:
       if: branch = master AND type = push
       node_js: 12
       script:
+        - npm run lint
+        # If package version was changed with last merged PR, push tag
         - |
-          npm run lint &&
-          {
-            # If package version was changed with last merged PR, push tag
-            tagName=`git diff HEAD^ package.json | grep '"version": "' | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"`
-            if [ $? -eq 0 ]; then
-              git tag v$tagName && git push -q https://$GITHUB_TOKEN@github.com/serverless/eslint-config --tags
-            fi
-          }
+          tagName=`git diff HEAD^ package.json | grep '"version": "' | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
+          if [  -n "$tagName" ];
+          then
+            git tag v$tagName && git push -q https://$GITHUB_TOKEN@github.com/serverless/eslint-config --tags
+          fi
 
     # version tag
     - stage: Deploy
