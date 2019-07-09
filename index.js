@@ -99,6 +99,7 @@ module.exports = {
     'prefer-spread': 'error',
     'prefer-template': 'error',
     'radix': 'error',
+    'require-atomic-updates': 'off', // Reports false positives: https://github.com/eslint/eslint/issues/11899
     'vars-on-top': 'error',
     'spaced-comment': ['error', 'always', { exceptions: ['-', '+'], markers: ['=', '!'] }],
     'strict': ['error', 'safe'],
