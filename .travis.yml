@@ -97,7 +97,8 @@ jobs:
           tagName=`git diff HEAD^ package.json | grep '"version": "' | tail -n 1 | grep -oE "[0-9]+\.[0-9]+\.[0-9]+"` || :
           if [ -n "$tagName" ];
           then
-            git tag v$tagName && git push -q https://$GITHUB_TOKEN@github.com/serverless/eslint-config --tags
+            git tag v$tagName
+            git push -q https://$GITHUB_TOKEN@github.com/serverless/eslint-config --tags
           fi
 
     # version tag
