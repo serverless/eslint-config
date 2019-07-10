@@ -35,7 +35,7 @@ module.exports = {
     'new-cap': ['error', { newIsCap: true }],
     'no-array-constructor': 'error',
     'no-caller': 'error',
-    'no-confusing-arrow': ['error', { allowParens: true }],
+    'no-confusing-arrow': ['error', { allowParens: false }],
     'no-console': 'error',
     'no-duplicate-imports': 'error',
     'no-else-return': 'error',
