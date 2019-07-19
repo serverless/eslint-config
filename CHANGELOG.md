@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/serverless/eslint-config/compare/v1.0.1...v1.1.0) (2019-07-19)
+
+### Bug Fixes
+
+- Turn off 'allowParens' for no-confusing-arrow (Prettier support) ([e0f6a74](https://github.com/serverless/eslint-config/commit/e0f6a74))
+- Turn off 'no-unused-expressions' for tests ([37c1969](https://github.com/serverless/eslint-config/commit/37c1969))
+
+### Features
+
+- Improve \*:updated scripts naming convention ([868046e](https://github.com/serverless/eslint-config/commit/868046e))
+
 ### [1.0.1](https://github.com/serverless/eslint-config/compare/v1.0.0...v1.0.1) (2019-07-09)
 
 ### Bug Fixes
