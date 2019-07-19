@@ -78,7 +78,7 @@ module.exports = {
     'no-underscore-dangle': ['error', { allowAfterThis: false }],
     'no-unexpected-multiline': 'off', // Handled by Prettier
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
-    'no-unused-expressions': ['error', { allowShortCircuit: false, allowTernary: false }],
+    'no-unused-expressions': ['error'],
     'no-unused-vars': ['error', { vars: 'local', args: 'after-used' }],
     'no-useless-computed-key': 'error',
     'no-useless-concat': 'error',
@@ -106,7 +106,13 @@ module.exports = {
     'yoda': 'error',
   },
   overrides: [
-    { files: ['**/*.test.js', '**/tests/**'], env: { mocha: true, jest: true } },
+    {
+      files: ['**/*.test.js', '**/tests/**'],
+      env: { mocha: true, jest: true },
+      rules: {
+        'no-unused-expressions': 'off', // Prevent errors on expect's e.g.: expect(foo).to.be.something
+      },
+    },
     { files: ['jest.setupEnvironment.js'], env: { jest: true } },
   ],
 };
