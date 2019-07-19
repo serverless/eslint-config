@@ -62,8 +62,8 @@ jobs:
       if: type = pull_request AND fork = false
       node_js: 12
       script:
-        - npm run prettier-check-updated
-        - npm run lint-updated
+        - npm run prettier-check:updated
+        - npm run lint:updated
         - npm run commitlint-ci-pull-request
         # If release PR, confirm we have a changelog
         - |
@@ -80,8 +80,8 @@ jobs:
       if: type = pull_request AND fork = true
       node_js: 12
       script:
-        - npm run prettier-check-updated
-        - npm run lint-updated
+        - npm run prettier-check:updated
+        - npm run lint:updated
 
     # master branch
     - name: 'Lint, Tag on version bump - Node.js v12'
