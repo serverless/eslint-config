@@ -52,11 +52,11 @@ module.exports = require('@serverless/eslint-config/prettier.config');
 {
   "scripts": {
     "lint": "eslint . --cache",
-    "lint-updated": "pipe-git-updated --ext=js -- eslint --cache",
+    "lint:updated": "pipe-git-updated --ext=js -- eslint --cache",
     "prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
-    "prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
+    "prettier-check:updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
     "prettify": "prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
-    "prettify-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier --write"
+    "prettify:updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier --write"
   }
 }
 ```
@@ -65,10 +65,10 @@ module.exports = require('@serverless/eslint-config/prettier.config');
 
 Run following validation of PR's in CI build.
 
-Note: following should be run only for PR's (as `*-updated`) scripts may fail on _branch_ or _tag_ builds due to lack of existing reference to `master`)
+Note: following should be run only for PR's (as `*:updated`) scripts may fail on _branch_ or _tag_ builds due to lack of existing reference to `master`)
 
 ```bash
-npm run lint-updated && npm run prettier-check-updated
+npm run lint:updated && npm run prettier-check:updated
 ```
 
 ---
