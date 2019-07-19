@@ -106,7 +106,13 @@ module.exports = {
     'yoda': 'error',
   },
   overrides: [
-    { files: ['**/*.test.js', '**/tests/**'], env: { mocha: true, jest: true } },
+    {
+      files: ['**/*.test.js', '**/tests/**'],
+      env: { mocha: true, jest: true },
+      rules: {
+        'no-unused-expressions': 'off', // Prevent errors on expect's e.g.: expect(foo).to.be.something
+      },
+    },
     { files: ['jest.setupEnvironment.js'], env: { jest: true } },
   ],
 };
