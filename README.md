@@ -4,10 +4,10 @@
 
 ### Configuration in a project
 
-#### 1. Install needed dependencies
+#### 1. Install needed dependencies & the config itself
 
 ```bash
-npm i --save-dev eslint eslint-plugin-import prettier git-list-updated
+npm i --save-dev eslint eslint-plugin-import prettier git-list-updated @serverless/eslint-config
 ```
 
 #### 2. Configure ESLint
