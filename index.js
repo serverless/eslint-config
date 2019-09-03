@@ -24,7 +24,15 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['**/*.test.js', '**/scripts/**', '**/tests/**', 'prettier.config.js'] },
+      {
+        devDependencies: [
+          '**/*.test.js',
+          '**/scripts/**',
+          '**/test/**',
+          '**/tests/**',
+          'prettier.config.js',
+        ],
+      },
     ],
     'import/no-mutable-exports': 'error',
     'import/no-named-as-default': 'error',
