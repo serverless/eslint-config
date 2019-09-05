@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
-    "eslint": "^6.0.1",
-    "eslint-plugin-import": "^2.18.1",
+    "eslint": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
     "git-list-updated": "^1.2.1",
     "github-release-from-cc-changelog": "^2.2.0",
     "prettier": "^1.18.2",
