@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/serverless/eslint-config/compare/v1.1.0...v1.2.0) (2019-09-05)
+
+### Bug Fixes
+
+- Include this package itself in the install instructions ([b8116c1](https://github.com/serverless/eslint-config/commit/b8116c1))
+
+### Features
+
+- Recognize 'test' folders as test files source ([23fa057](https://github.com/serverless/eslint-config/commit/23fa057))
+
 ## [1.1.0](https://github.com/serverless/eslint-config/compare/v1.0.1...v1.1.0) (2019-07-19)
 
 ### Bug Fixes
