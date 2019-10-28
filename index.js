@@ -9,7 +9,6 @@ module.exports = {
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'camelcase': ['error', { properties: 'never' }],
-    'comma-dangle': ['error', 'always-multiline'],
     'consistent-return': 'error',
     'curly': ['error', 'multi-line'],
     'default-case': ['error', { commentPattern: '^no default$' }],
