@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/serverless/eslint-config/compare/v1.2.0...v1.2.1) (2019-10-28)
+
+### Bug Fixes
+
+- Turn off 'comma-dangle' as it conflicts with Prettier ([495de4a](https://github.com/serverless/eslint-config/commit/495de4a))
+
 ## [1.2.0](https://github.com/serverless/eslint-config/compare/v1.1.0...v1.2.0) (2019-09-05)
 
 ### Bug Fixes
