@@ -20,8 +20,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "eslint": "^6.3.0",
+    "@commitlint/cli": "^8.2.0",
+    "eslint": "^6.6.0",
     "eslint-plugin-import": "^2.18.2",
     "git-list-updated": "^1.2.1",
     "github-release-from-cc-changelog": "^2.2.0",
