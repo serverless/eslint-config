@@ -114,7 +114,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.test.js', '**/tests/**'],
+      files: ['**/*.test.js', '**/test/**'],
       env: { mocha: true, jest: true },
       rules: {
         'no-unused-expressions': 'off', // Prevent errors on expect's e.g.: expect(foo).to.be.something
