@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/serverless/eslint-config/compare/v1.2.1...v2.0.0) (2020-04-28)
+
+### ⚠ BREAKING CHANGES
+
+- "tests" folders are no longer recognized as test folders.
+  Instead we recognize "test" which is widely practised convention
+- Drop support for Node.js v8
+- Drop support for eslint v5
+
+### Features
+
+- Recognize "test" (instead of "tests") as tests folder ([5e3e0e5](https://github.com/serverless/eslint-config/commit/5e3e0e58defe2e2462a1d138c0d7baca261a23ac))
+- Support ES2018 syntax ([f9cd210](https://github.com/serverless/eslint-config/commit/f9cd210f86ad8dd7e29fc0edc5cd2f4a06e5bd8e))
+
 ### [1.2.1](https://github.com/serverless/eslint-config/compare/v1.2.0...v1.2.1) (2019-10-28)
 
 ### Bug Fixes
