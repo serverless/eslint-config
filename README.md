@@ -51,8 +51,8 @@ module.exports = require('@serverless/eslint-config/prettier.config');
 ```json
 {
   "scripts": {
-    "lint": "eslint . --cache",
-    "lint:updated": "pipe-git-updated --ext=js -- eslint --cache",
+    "lint": "eslint .",
+    "lint:updated": "pipe-git-updated --ext=js -- eslint",
     "prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
     "prettier-check:updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
     "prettify": "prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
