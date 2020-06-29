@@ -75,7 +75,6 @@ module.exports = {
     'no-shadow': 'error',
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
-    'no-underscore-dangle': ['error', { allowAfterThis: false }],
     'no-unexpected-multiline': 'off', // Handled by Prettier
     'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'no-unused-expressions': ['error'],
