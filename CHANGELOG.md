@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/serverless/eslint-config/compare/v1.2.1...v1.3.0) (2020-07-15)
+
+### Features
+
+- Allow labeled statements ([b182e61](https://github.com/serverless/eslint-config/commit/b182e61bd6c750d56d97fa2b525c21a4e459ecd2))
+
+### Bug Fixes
+
+- Turn off 'no-underscore-dangle' ([b1800dc](https://github.com/serverless/eslint-config/commit/b1800dcd30f270463c55be88fcfc0886e8aa4ddd))
+
 ### [1.2.1](https://github.com/serverless/eslint-config/compare/v1.2.0...v1.2.1) (2019-10-28)
 
 ### Bug Fixes
