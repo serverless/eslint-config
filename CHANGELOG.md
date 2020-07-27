@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/serverless/eslint-config/compare/v2.1.1...v2.2.0) (2020-07-27)
+
+### Features
+
+- Introduce Node.js v6 dedicated config ([3444609](https://github.com/serverless/eslint-config/commit/3444609a1ccb9b9e0b6be0a9ea0f345d5f63f399))
+
 ### [2.1.1](https://github.com/serverless/eslint-config/compare/v2.1.0...v2.1.1) (2020-06-29)
 
 ### Bug Fixes
