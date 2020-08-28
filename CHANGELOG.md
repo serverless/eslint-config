@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/serverless/eslint-config/compare/v2.2.0...v3.0.0) (2020-08-28)
+
+### ⚠ BREAKING CHANGES
+
+- ES2019 syntax is now accepted as valid
+
+### Features
+
+- Upgrade to support ES2019 ([ec7e343](https://github.com/serverless/eslint-config/commit/ec7e34374b24a188c2252c4a05d254a45d38457e))
+
 ## [2.2.0](https://github.com/serverless/eslint-config/compare/v2.1.1...v2.2.0) (2020-07-27)
 
 ### Features
