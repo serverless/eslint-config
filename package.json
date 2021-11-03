@@ -20,7 +20,7 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.2",
+    "@commitlint/cli": "^12.1.4",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.2",
     "git-list-updated": "^1.2.1",
