@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/serverless/eslint-config/compare/v3.0.2...v4.0.0) (2021-11-03)
+
+### ⚠ BREAKING CHANGES
+
+- Default Node.js configuration is set for Node.js v12. Projects which support Node.js v10 need to switch to `node/10`
+
+### Features
+
+- Upgrade default Node.js configuration to v12 ([adfbb1d](https://github.com/serverless/eslint-config/commit/adfbb1da9adea90d0d68ecb222913a52e4370b03))
+
 ### [3.0.2](https://github.com/serverless/eslint-config/compare/v3.0.1...v3.0.2) (2021-11-03)
 
 ### Bug Fixes
