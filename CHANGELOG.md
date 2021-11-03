@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.2](https://github.com/serverless/eslint-config/compare/v3.0.1...v3.0.2) (2021-11-03)
+
+### Bug Fixes
+
+- Fix `BigInt` recognition configuration ([c4948c0](https://github.com/serverless/eslint-config/commit/c4948c0cf28470f7ac87b37f8c733ab387f6b52f))
+
 ### [3.0.1](https://github.com/serverless/eslint-config/compare/v3.0.0...v3.0.1) (2021-11-03)
 
 ### Bug Fixes
