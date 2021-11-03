@@ -10,7 +10,7 @@
   "author": "serverless.com",
   "repository": "serverless/eslint-config",
   "eslintConfig": {
-    "extends": "./node",
+    "extends": "./node/6",
     "root": true
   },
   "standard-version": {
@@ -43,6 +43,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=6.0"
   },
   "license": "MIT"
 }
