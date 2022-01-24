@@ -65,7 +65,7 @@ module.exports = require('@serverless/eslint-config/prettier.config');
 
 Run following validation of PR's in CI build.
 
-Note: following should be run only for PR's (as `*:updated`) scripts may fail on _branch_ or _tag_ builds due to lack of existing reference to `master`)
+Note: following should be run only for PR's (as `*:updated`) scripts may fail on _branch_ or _tag_ builds due to lack of existing reference to `main`)
 
 ```bash
 npm run lint:updated && npm run prettier-check:updated
@@ -86,7 +86,7 @@ See proposed [Commit Message Guidelines](https://docs.google.com/document/d/1hKU
 1. In Release PR by running `npm run prepare-release` command developer bumps version in `package.json` and generates the changelog entry (which can be altered if needed).
 1. Release PR's are automatically detected in CI by fact of `version` in `package.json` file being changed.
    In context of that build, existence of new version changelog entry (in `CHANGELOG.md`) is validated.
-1. Once release PR is merged, `master` build detects that release PR was merged by fact that it covers change of `version` field in `package.json` file. In such case (after tests pass) version tag is created and pushed to the repository
+1. Once release PR is merged, `main` build detects that release PR was merged by fact that it covers change of `version` field in `package.json` file. In such case (after tests pass) version tag is created and pushed to the repository
 1. In context fo version tag build, new version is published to npm, and release notes are retrieved from CHANGELOG.md and pushed to GitHub.
 1. If needed release notes can be updated at any time afterwards. They should be updated in `CHANGELOG.md` and change can be pushed to GitHub release notes by running:
    `npx github-release-from-cc-changelog <version>`

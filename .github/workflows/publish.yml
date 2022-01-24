@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: node_modules
-          key: node-modules-v16-${{ runner.os }}-refs/heads/master-${{ hashFiles('package.json') }}
+          key: node-modules-v16-${{ runner.os }}-refs/heads/main-${{ hashFiles('package.json') }}
 
       - name: Install Node.js and npm
         uses: actions/setup-node@v1
@@ -40,8 +40,8 @@ jobs:
         run: npm publish
 
       # Normally we have a guarantee that deps are already there, still it may not be the case when:
-      # - `master` build for same commit failed (and we still pushed tag manually)
-      # - We've pushed tag manually before `master` build finalized
+      # - `main` build for same commit failed (and we still pushed tag manually)
+      # - We've pushed tag manually before `main` build finalized
       - name: Install dependencies
         if: steps.cacheNpm.outputs.cache-hit != 'true'
         run: |
