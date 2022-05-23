@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/serverless/eslint-config/compare/v4.0.0...v4.0.1) (2022-05-23)
+
+### Bug Fixes
+
+- Do not recognize `fetch` global in Node.js v12 ([4d6663c](https://github.com/serverless/eslint-config/commit/4d6663ce4fd7afeb2161ec155c15cb5971a13cdd))
+
 ## [4.0.0](https://github.com/serverless/eslint-config/compare/v3.0.2...v4.0.0) (2021-11-03)
 
 ### ⚠ BREAKING CHANGES
