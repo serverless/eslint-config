@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0](https://github.com/serverless/eslint-config/compare/v4.0.1...v5.0.0) (2022-08-16)
+
+### ⚠ BREAKING CHANGES
+
+- Default for Node.js was switched from v12+ to v14+. To lint for Node.js v12+, rely on `node/12` configuration
+
+### Features
+
+- Upgrade default Node.js config to v14 ([c8a8e95](https://github.com/serverless/eslint-config/commit/c8a8e952f8578aed16624319b1a5394fde7c1522))
+
 ### [4.0.1](https://github.com/serverless/eslint-config/compare/v4.0.0...v4.0.1) (2022-05-23)
 
 ### Bug Fixes
