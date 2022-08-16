@@ -1,6 +1,6 @@
 {
   "name": "@serverless/eslint-config",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "ESLint & Prettier config for Serveless projects",
   "keywords": [
     "lint",
