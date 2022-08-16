@@ -2,8 +2,7 @@
 
 module.exports = {
   extends: 'eslint:recommended',
-  env: { es6: true },
-  parserOptions: { ecmaVersion: 2020 },
+  env: { es2020: true },
   plugins: ['import'],
   rules: {
     'array-callback-return': 'error',
