@@ -20,12 +20,12 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.3",
-    "eslint": "^8.22.0",
-    "eslint-plugin-import": "^2.26.0",
+    "@commitlint/cli": "^17.6.5",
+    "eslint": "^8.43.0",
+    "eslint-plugin-import": "^2.27.5",
     "git-list-updated": "^1.2.1",
     "github-release-from-cc-changelog": "^2.3.0",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.8",
     "standard-version": "^9.5.0"
   },
   "peerDependencies": {
