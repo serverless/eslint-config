@@ -105,6 +105,10 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['**/*.mjs'],
+      parserOptions: { sourceType: 'module' },
+    },
+    {
       files: ['**/*.test.js', '**/test/**'],
       env: { mocha: true, jest: true },
       rules: {
