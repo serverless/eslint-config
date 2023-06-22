@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.1.0](https://github.com/serverless/eslint-config/compare/v5.0.1...v5.1.0) (2023-06-22)
+
+### Features
+
+- Recognize \*.mjs files as ESM modules ([f2c0a15](https://github.com/serverless/eslint-config/commit/f2c0a15a58938f2e6ef683e36bf64fd3db8e387f))
+
 ### [5.0.1](https://github.com/serverless/eslint-config/compare/v5.0.0...v5.0.1) (2022-08-16)
 
 ### Bug Fixes
